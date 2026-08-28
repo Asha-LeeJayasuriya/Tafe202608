@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="UniversalCalculator.universalcalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="universalcalculator">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" Width="1024" Height="768">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="800">
+                <TextBlock x:Name="titleTextBlock" Text="Universal Calculator"/>
+                <Button x:Name="mathCalculatorButton" Content="Math Calculator" Click="mathCalculatorButton_Click"/>
+                <Button x:Name="mortgageCalculatorButton" Content="Mortgage Calculator" Click="mortgageCalculatorButton_Click"/>
+                <Button x:Name="currencyCalculatorButton" Content="Currency Calculator" Click="currencyCalculatorButton_Click"/>
+                <Button x:Name="exitButton" Content="Exit" Click="exitButton_Click"/>
+            </StackPanel>
+            <StackPanel>
+                <Image x:Name="abacusmage"  Width="200" Height="200" Source="/Assets/abacus.jpg"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
