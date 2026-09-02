@@ -44,6 +44,11 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="CurrencyConverterWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="universalcalculator.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
