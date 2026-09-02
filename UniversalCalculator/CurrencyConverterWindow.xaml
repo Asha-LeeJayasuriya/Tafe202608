@@ -23,14 +23,16 @@
         <ComboBox x:Name="cboFrom" Width="200" HorizontalAlignment="Left" SelectedIndex="0">
             <ComboBoxItem Content="USD"/>
             <ComboBoxItem Content="EUR"/>
-            <ComboBoxItem Content="AUD"/>
+            <ComboBoxItem Content="GBP"/>
+            <ComboBoxItem Content="INR"/>
         </ComboBox>
 
         <TextBlock Text="To"/>
         <ComboBox x:Name="cboTo" Width="200" HorizontalAlignment="Left" SelectedIndex="1">
             <ComboBoxItem Content="USD"/>
             <ComboBoxItem Content="EUR"/>
-            <ComboBoxItem Content="AUD"/>
+            <ComboBoxItem Content="GBP"/>
+            <ComboBoxItem Content="INR"/>
         </ComboBox>
 
         <Button Content="Calculate Currency" Click="btnCalculate_Click"/>

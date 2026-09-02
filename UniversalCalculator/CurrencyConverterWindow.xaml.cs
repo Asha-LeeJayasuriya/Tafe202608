@@ -19,7 +19,7 @@ using Windows.Foundation.Collections;
 namespace UniversalCalculator
 {
     /// <summary>
-    /// An empty window that can be used on its own or navigated to within a Frame.
+    /// Currency Conversion Calculator window.
     /// </summary>
     public sealed partial class CurrencyConverterWindow : Window
     {
@@ -28,18 +28,34 @@ namespace UniversalCalculator
             InitializeComponent();
         }
 
-        // Exchange rates against USD
-        private double GetRate(string code)
+        // Conversion rates from the ASI Appendix table
+        private double GetConversionRate(string fromCode, string toCode)
         {
-            if (code == "EUR") return 0.85;
-            if (code == "AUD") return 1.52;
-            return 1.0;   // USD
+            string pair = fromCode + "-" + toCode;
+
+            if (pair == "USD-EUR") return 0.85189982;
+            if (pair == "USD-GBP") return 0.72872436;
+            if (pair == "USD-INR") return 74.257327;
+
+            if (pair == "EUR-USD") return 1.1739732;
+            if (pair == "EUR-GBP") return 0.8556672;
+            if (pair == "EUR-INR") return 87.00755;
+
+            if (pair == "GBP-USD") return 1.371907;
+            if (pair == "GBP-EUR") return 1.1686692;
+            if (pair == "GBP-INR") return 101.68635;
+
+            if (pair == "INR-USD") return 0.011492628;
+            if (pair == "INR-EUR") return 0.013492774;
+            if (pair == "INR-GBP") return 0.0098339397;
+
+            return 1.0;   // same currency selected
         }
 
         // Calculation method: accepts the input parameters and returns the result
         public double ConvertCurrency(double amount, string fromCode, string toCode)
         {
-            double exchangeRate = GetRate(toCode) / GetRate(fromCode);
+            double exchangeRate = GetConversionRate(fromCode, toCode);
             return amount * exchangeRate;
         }
 
