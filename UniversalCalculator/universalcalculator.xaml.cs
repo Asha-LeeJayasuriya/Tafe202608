@@ -47,6 +47,18 @@ namespace UniversalCalculator
             this.Close();
         }
 
+            private async void tripCalculatorButton_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog dialog = new ContentDialog
+            {
+                Content = "Trip calculator C# code will be developed later.",
+                CloseButtonText = "OK",
+                XamlRoot = this.Content.XamlRoot
+            };
+
+            await dialog.ShowAsync();
+        }
+
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
