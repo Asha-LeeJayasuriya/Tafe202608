@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="UniversalCalculator.mortgageCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="mortgageCalculator">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid>
+        <StackPanel Orientation="Vertical" Background="Green" Width="1024" Height="768">
+            <StackPanel x:Name="titlePanel" Background="LightGreen">
+                <TextBlock x:Name="titleBlock" TextAlignment="Center" Width="400" Height="50" HorizontalAlignment="Stretch" Text="Mortgage Calculator"/>
+            </StackPanel>
+            <StackPanel x:Name="principalPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="principalTextBlock" Width="200" Text="Principal borrowed: $"/>
+                <TextBox x:Name="principalTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="yearsPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="yearsTextBlock" Width="200" Text="Years:"/>
+                <TextBox x:Name="yearsTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="monthsPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="monthsTextBlock" Width="200" Text="Months:"/>
+                <TextBox x:Name="monthsTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="annualInterestPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="annualInterestTextBlock" Width="200" Text="Annual Interest Rate: %"/>
+                <TextBox x:Name="annualInterestTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="monthlyInterestPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="monthlyInterestTextBlock" Width="200" Text="Monthly Interest Rate:"/>
+                <TextBox x:Name="monthlyInterestTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="monthlyRepaymentPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="monthlyRepaymentTextBlock" Width="200" Text="Monthly Repayment:"/>
+                <TextBox x:Name="monthlyRepaymentTextBox" Width="200"/>
+            </StackPanel>
+            <StackPanel x:Name="calculatorButtonsPanel" HorizontalAlignment="Center">
+                <Button x:Name="calculateButton" Content="Calculate" Click="calculateButton_Click"/>
+                <Button x:Name="exitButton" Content="Exit" Click="exitButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
