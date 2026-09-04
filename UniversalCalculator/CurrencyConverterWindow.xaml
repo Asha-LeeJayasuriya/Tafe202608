@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="UniversalCalculator.CurrencyConverterWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UniversalCalculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Currency Conversion Calculator">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <StackPanel Padding="30" Spacing="12">
+        <TextBlock Text="Currency Conversion Calculator" FontSize="32" FontWeight="Bold"/>
+
+        <TextBlock Text="Amount"/>
+        <TextBox x:Name="txtAmount" Text="100" Width="200" HorizontalAlignment="Left"/>
+
+        <TextBlock Text="From"/>
+        <ComboBox x:Name="cboFrom" Width="200" HorizontalAlignment="Left" SelectedIndex="0">
+            <ComboBoxItem Content="USD"/>
+            <ComboBoxItem Content="EUR"/>
+            <ComboBoxItem Content="GBP"/>
+            <ComboBoxItem Content="INR"/>
+        </ComboBox>
+
+        <TextBlock Text="To"/>
+        <ComboBox x:Name="cboTo" Width="200" HorizontalAlignment="Left" SelectedIndex="1">
+            <ComboBoxItem Content="USD"/>
+            <ComboBoxItem Content="EUR"/>
+            <ComboBoxItem Content="GBP"/>
+            <ComboBoxItem Content="INR"/>
+        </ComboBox>
+
+        <Button Content="Calculate Currency" Click="btnCalculate_Click"/>
+
+        <TextBlock x:Name="lblResult" FontSize="24" FontWeight="Bold"/>
+    </StackPanel>
+</Window>

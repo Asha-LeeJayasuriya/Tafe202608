@@ -40,7 +40,8 @@ namespace UniversalCalculator
 
         private void currencyCalculatorButton_Click(object sender, RoutedEventArgs e)
         {
-
+            CurrencyConverterWindow currencyWindow = new CurrencyConverterWindow();
+            currencyWindow.Activate();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
