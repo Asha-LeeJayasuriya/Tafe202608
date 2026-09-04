@@ -45,11 +45,10 @@
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Page Update="mortgageCalculator.xaml">
-=======
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="CurrencyConverterWindow.xaml">
->>>>>>> 6076a6d1ae9ab2ebc9cec6524472d9043f56ed86
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
