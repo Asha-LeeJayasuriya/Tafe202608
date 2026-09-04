@@ -121,7 +121,9 @@ namespace UniversalCalculator
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            universalcalculator universalcalculator = new universalcalculator();
+            universalcalculator.Activate();
+            this.Close();
         }
     }
 }

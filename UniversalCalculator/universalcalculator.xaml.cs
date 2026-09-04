@@ -35,18 +35,21 @@ namespace UniversalCalculator
 
         private void mortgageCalculatorButton_Click(object sender, RoutedEventArgs e)
         {
-
+            mortgageCalculator mortgageCalculator = new mortgageCalculator();
+            mortgageCalculator.Activate();
+            this.Close();
         }
 
         private void currencyCalculatorButton_Click(object sender, RoutedEventArgs e)
         {
             CurrencyConverterWindow currencyWindow = new CurrencyConverterWindow();
             currencyWindow.Activate();
+            this.Close();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

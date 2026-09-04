@@ -69,5 +69,12 @@ namespace UniversalCalculator
 
             lblResult.Text = amount + " " + fromCode + " = " + result.ToString("N2") + " " + toCode;
         }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            universalcalculator universalcalculator = new universalcalculator();
+            universalcalculator.Activate();
+            this.Close();
+        }
     }
 }

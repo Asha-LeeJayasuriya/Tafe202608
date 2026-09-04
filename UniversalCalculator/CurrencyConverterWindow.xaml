@@ -36,7 +36,7 @@
         </ComboBox>
 
         <Button Content="Calculate Currency" Click="btnCalculate_Click"/>
-
+        <Button Content="Exit" Click="exitButton_Click"/>
         <TextBlock x:Name="lblResult" FontSize="24" FontWeight="Bold"/>
     </StackPanel>
 </Window>
